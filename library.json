@@ -1,0 +1,17 @@
+{
+    "name": "KMESerial",
+    "keywords": "IOT, CLOUD, weight,HX711,steppermotor,Dcmotor,KMESerial,kme,kme smart",
+    "description": "iot non limited data post and get cloud",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adnanelabdullah/KMESerial.git"
+    },
+    "version": "0.0.1",
+    "exclude": "tests",
+    "examples": "examples/*/*.ino",
+    "frameworks": "arduino",
+    "platforms": [
+        "atmelavr",
+        "espressif"
+    ]
+}

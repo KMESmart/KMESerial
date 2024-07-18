@@ -1,0 +1,21 @@
+#######################################
+# Syntax Coloring Map For KMESerial
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+KMESerial	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+setCallback	     KEYWORD2      
+loop	 KEYWORD2
+setSensor    KEYWORD2
+SetSwitch     KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
+KMESerial	LITERAL1	Constants	RESERVED_WORD_2
