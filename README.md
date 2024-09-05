@@ -22,7 +22,6 @@
 //note for ESP32
 RX Pin (ESP32): GPIO 26
 TX Pin (ESP32): GPIO 27
-This `README.md` file contains all necessary information for installing and using the `KMESerial` library, along with hardware setup instructions for an ESP32, a usage example, and licensing information.
 
 
 
