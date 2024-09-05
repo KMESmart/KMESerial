@@ -1,7 +1,7 @@
 {
     "name": "KMESerial",
-    "keywords": "IOT, CLOUD, weight,HX711,steppermotor,Dcmotor,KMESerial,kme,kme smart",
-    "description": "iot non limited data post and get cloud",
+    "keywords": "KMESerial,kme,kme smart",
+    "description": "KME Serial",
     "repository": {
         "type": "git",
         "url": "https://github.com/KMESmart/KMESerial.git"
