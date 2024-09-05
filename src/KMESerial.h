@@ -8,7 +8,19 @@
 #ifndef KMESerial_h
 #define KMESerial_h
 #include <Arduino.h>
-
+typedef struct Settings {
+  long currentTime;
+  long uptime;
+  int restCount;
+    int apiversion;
+ int heartbeat=0;
+  String version;
+  String macAddress;
+  String responseId;
+  String build;
+  int someValue;
+  bool changed=false;
+}Settings;
 
 typedef struct Sensorupdate {
 uint8_t   id = 0;
@@ -34,11 +46,12 @@ class KMESerial
     void loop();
     void setSensor(uint8_t id ,int value );
     void SetSwitch(uint8_t id ,bool value);
+    void getStatus(uint8_t id);
+    void getSettings(uint8_t type);
+     Settings info();
   private:
-
-       
     void (*userCallback)(KME data);
-
+    
 };
 
 #endif
