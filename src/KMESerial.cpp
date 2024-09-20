@@ -76,7 +76,7 @@ void KMESerial::loop()
             
              byte header1 = KMECommand[0];
           byte header2 = KMECommand[1];
-          byte datalength = KMECommand[2];
+          byte datalength = KMECommand[2];//wifi state
           byte id = KMECommand[3];
           byte valstate = KMECommand[4];
            byte valstate1 = KMECommand[5];
@@ -117,7 +117,7 @@ void KMESerial::loop()
                 
               if (deviceinfo.heartbeat>5000)
               {
-              
+              deviceinfo. WIFIState=datalength==1?true:false;
                 deviceinfo.heartbeat=0;
               }
               
@@ -244,9 +244,8 @@ else
     Serial.write(buffer, sizeof(buffer));
 }
 
-    void KMESerial::SetSwitch(uint8_t id ,bool value)
+    void KMESerial::SetSwitch(uint8_t id ,uint8_t newval)
 {
-  uint8_t newval =value?1:0;
 
 if (abs(newval-valuessensor[id].oldstate)>=valuessensor[id].ratio)
 {
@@ -274,6 +273,7 @@ else
     buffer[9] = checksum; //  checksum byte
     Serial.write(buffer, sizeof(buffer));
 }
+
     void KMESerial::getStatus(uint8_t id)
 {
  
