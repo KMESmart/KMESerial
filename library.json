@@ -6,7 +6,7 @@
         "type": "git",
         "url": "https://github.com/KMESmart/KMESerial.git"
     },
-    "version": "0.0.4",
+    "version": "0.0.5",
     "exclude": "tests",
     "examples": "examples/*/*.ino",
     "frameworks": "arduino",
