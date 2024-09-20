@@ -19,6 +19,7 @@ typedef struct Settings {
   String responseId;
   String build;
   int someValue;
+  bool WIFIState;
   bool changed=false;
 }Settings;
 
@@ -45,7 +46,7 @@ class KMESerial
     void setCallback(void (*callback)(KME data));
     void loop();
     void setSensor(uint8_t id ,int value );
-    void SetSwitch(uint8_t id ,bool value);
+    void SetSwitch(uint8_t id ,uint8_t newval);
     void getStatus(uint8_t id);
     void getSettings(uint8_t type);
      Settings info();
