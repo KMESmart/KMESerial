@@ -57,7 +57,7 @@ void KMESerial::loop()
       if (serialBuffer[i] == HEADER1 && serialBuffer[i + 1] == HEADER2) {  // Check for the header
               int commandLength = 8;  // Default length
 
-      if (serialBuffer[i + 2]==23 )
+      if (serialBuffer[i + 2]==23 ||serialBuffer[i + 2]==24)
       {
        commandLength=11;
       }
@@ -117,7 +117,7 @@ void KMESerial::loop()
                 
               if (deviceinfo.heartbeat>5000)
               {
-              deviceinfo. WIFIState=datalength==1?true:false;
+              deviceinfo. WIFIState=datalength==23?true:false;
                 deviceinfo.heartbeat=0;
               }
               
